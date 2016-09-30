@@ -1,11 +1,13 @@
 /* File: crelib.cpp
  * Author: CRE
- * Last Edited: Fri Sep 30 15:15:17 2016
+ * Last Edited: Fri Sep 30 15:56:42 2016
  */
 
 #include "crelib.h"
 #include <stdlib.h>
 #include <sys/time.h>
+
+using namespace crelib;
 
 void die(const char * Message)
 {
