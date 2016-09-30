@@ -8,3 +8,6 @@ LIBCRE_OBJS=crelib.o
 
 libcre.a:$(LIBCRE_OBJS)
 	$(AR) -rc $@ $(LIBCRE_OBJS)
+
+clean:
+	rm *.o *.a
