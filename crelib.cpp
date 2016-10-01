@@ -1,15 +1,13 @@
 /* File: crelib.cpp
  * Author: CRE
- * Last Edited: Fri Sep 30 15:56:42 2016
+ * Last Edited: Sat Oct  1 14:11:47 2016
  */
 
 #include "crelib.h"
 #include <stdlib.h>
 #include <sys/time.h>
 
-using namespace crelib;
-
-void die(const char * Message)
+void cre::die(const char * Message)
 {
 	fprintf(stderr,"%s\n", Message);
 	exit(1);
@@ -17,7 +15,7 @@ void die(const char * Message)
 
 unsigned long long LastTime=0;
 
-void updateTime(const char * What, const char * OtherMessage, FILE* LogFile)
+void cre::updateTime(const char * What, const char * OtherMessage, FILE* LogFile)
 {
 	unsigned long long ThisTime;
 	if (LastTime==0)
@@ -26,13 +24,13 @@ void updateTime(const char * What, const char * OtherMessage, FILE* LogFile)
 		fprintf(LogFile, "Performed time initial.\n");
 	}
 	ThisTime=getTimeInMuse();
-	fprintf(LogFile,"%s cost %lld ms.",What, ThisTime-LastTime);
+	fprintf(LogFile,"%s cost %lld ms.",What, (ThisTime-LastTime)/1000);
 	LastTime=ThisTime;
 	if (OtherMessage!=NULL) fprintf(LogFile," %s",OtherMessage);
 	fprintf(LogFile,"\n");
 }
 
-unsigned long long getTimeInMuse()
+unsigned long long cre::getTimeInMuse()
 {
 	timeval VTime;
 	gettimeofday(&VTime, NULL);

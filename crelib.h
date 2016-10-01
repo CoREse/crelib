@@ -3,7 +3,7 @@
 #define CRELIB_H
 #include <stdio.h>
 #include "defines.h"
-namespace crelib
+namespace cre
 {
 	void die(const char * Message=NULL);
 	void updateTime(const char * What, const char * OtherMessage=NULL, FILE * LogFile=stderr);
