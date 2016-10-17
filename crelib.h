@@ -2,6 +2,7 @@
 #ifndef CRELIB_H
 #define CRELIB_H
 #include <stdio.h>
+#include <stdlib.h>
 #include "defines.h"
 namespace cre
 {
