@@ -1,6 +1,6 @@
 /* File: sample.cpp
  * Author: CRE
- * Last Edited: Mon Oct 17 16:41:55 2016
+ * Last Edited: Mon Oct 17 16:56:13 2016
  */
 
 #include "../crelib.h"
@@ -18,5 +18,6 @@ int main ()
 	cout<<"The time now in microseconds is "<<getTimeInMuse()<<endl;
 	if (*Out!=1) die("You must input 1!");
 	updateTime("The sample");
+	free(Out);
 	return 0;
 }
