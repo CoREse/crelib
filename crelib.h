@@ -6,7 +6,7 @@
 #include "defines.h"
 namespace cre
 {
-	void die(const char * Message=NULL);
+	void die(const char * Format=NULL, ...);
 	void updateTime(const char * What, const char * OtherMessage=NULL, FILE * LogFile=stderr);
 	unsigned long long getTimeInMuse();//get time in microseconds. Muse no minasan, daisuki!^.^
 }

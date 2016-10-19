@@ -1,15 +1,19 @@
 /* File: crelib.cpp
  * Author: CRE
- * Last Edited: Sat Oct  1 14:11:47 2016
+ * Last Edited: Wed Oct 19 18:02:00 2016
  */
 
 #include "crelib.h"
 #include <stdlib.h>
+#include <stdarg.h>
 #include <sys/time.h>
 
-void cre::die(const char * Message)
+void cre::die(const char * Format, ...)
 {
-	fprintf(stderr,"%s\n", Message);
+	va_list argptr;
+	va_start(argptr, Format);
+	vfprintf(stderr,Format,argptr);
+	fprintf(stderr, "\n");
 	exit(1);
 }
 
