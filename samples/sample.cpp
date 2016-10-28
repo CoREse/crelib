@@ -1,6 +1,6 @@
 /* File: sample.cpp
  * Author: CRE
- * Last Edited: Wed Oct 19 18:00:52 2016
+ * Last Edited: Fri Oct 28 16:18:37 2016
  */
 
 #include "../crelib.h"
@@ -10,6 +10,7 @@ using namespace std;
 
 int main ()
 {
+	warn("You are using a sample!");
 	uint64 In=0;
 	uint64 *Out=myalloc(1,uint64);
 	updateTime("Initial", "This is a sample for crelib. Please enter 1:");

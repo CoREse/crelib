@@ -1,6 +1,6 @@
 /* File: crelib.cpp
  * Author: CRE
- * Last Edited: Wed Oct 19 18:02:00 2016
+ * Last Edited: Fri Oct 28 16:18:03 2016
  */
 
 #include "crelib.h"
@@ -15,6 +15,14 @@ void cre::die(const char * Format, ...)
 	vfprintf(stderr,Format,argptr);
 	fprintf(stderr, "\n");
 	exit(1);
+}
+
+void cre::warn(const char * Format, ...)
+{
+	va_list argptr;
+	va_start(argptr, Format);
+	vfprintf(stderr,Format,argptr);
+	fprintf(stderr, "\n");
 }
 
 unsigned long long LastTime=0;
