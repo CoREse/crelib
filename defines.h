@@ -11,5 +11,6 @@ namespace cre
 	typedef unsigned int uint;
 	typedef unsigned long long uint64;
 	typedef long long int64;
+	typedef unsigned char uchar;
 }
 #endif
