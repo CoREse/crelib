@@ -6,6 +6,14 @@
 #define myalloc(n,T) (T*)malloc(n*sizeof(T))
 #endif
 
+#ifndef toCStringHelper
+#define toCStringHelper(X) #X
+#endif
+
+#ifndef toCString
+#define toCString(X) toCStringHelper(X)
+#endif
+
 namespace cre
 {
 	typedef unsigned int uint;

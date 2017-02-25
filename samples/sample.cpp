@@ -1,6 +1,6 @@
 /* File: sample.cpp
  * Author: CRE
- * Last Edited: Fri Oct 28 16:18:37 2016
+ * Last Edited: Sat Feb 25 14:32:56 2017
  */
 
 #include "../crelib.h"
@@ -20,5 +20,6 @@ int main ()
 	if (*Out!=1) die("You must input 1! Instead you inputed %u!", *Out);
 	updateTime("The sample");
 	free(Out);
+	printf("This is a " toCString(2));
 	return 0;
 }
