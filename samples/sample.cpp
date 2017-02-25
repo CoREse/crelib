@@ -1,6 +1,6 @@
 /* File: sample.cpp
  * Author: CRE
- * Last Edited: Sat Feb 25 14:32:56 2017
+ * Last Edited: Sat Feb 25 14:40:04 2017
  */
 
 #include "../crelib.h"
@@ -20,6 +20,7 @@ int main ()
 	if (*Out!=1) die("You must input 1! Instead you inputed %u!", *Out);
 	updateTime("The sample");
 	free(Out);
-	printf("This is a " toCString(2));
+	int VName=12;
+	printf("This is a " STRING(2) " and this only transforms the literal string(the variable name): " STRING(VName) "\n");
 	return 0;
 }

@@ -6,12 +6,12 @@
 #define myalloc(n,T) (T*)malloc(n*sizeof(T))
 #endif
 
-#ifndef toCStringHelper
-#define toCStringHelper(X) #X
+#ifndef STRING_HELPER
+#define STRING_HELPER(X) #X
 #endif
 
-#ifndef toCString
-#define toCString(X) toCStringHelper(X)
+#ifndef STRING
+#define STRING(X) STRING_HELPER(X)
 #endif
 
 namespace cre
